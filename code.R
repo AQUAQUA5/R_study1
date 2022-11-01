@@ -78,5 +78,5 @@ compare_v <- data.frame(pred_v, db3[validation, "bsl"], pred_v - db3[validation,
 colnames(compare_v) <- c("예상", "실제", "오차")
 head(compare_v, 20)
 
-mean(sqrt((compare_t[,"오차"])^2))
-mean(sqrt((compare_v[,"오차"])^2))
+mean(abs(compare_t[,"오차"]))
+mean(abs(compare_v[,"오차"]))
